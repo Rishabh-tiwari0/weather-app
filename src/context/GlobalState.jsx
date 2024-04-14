@@ -8,8 +8,6 @@ const StateProvider = ({ children }) => {
   const [forecastData, setForecastData] = useState();
 
   const [selectedCity, setSelectedCIty] = useState(null);
-  console.log("weather =", weatherDetails);
-  console.log("forecast =", forecastData);
 
   return (
     <WeatherContext.Provider

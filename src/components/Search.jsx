@@ -34,14 +34,12 @@ const Search = ({ fetchDetails }) => {
       const timer = setTimeout(() => {
         searchCity(input);
       }, 1000);
-      console.log(timer);
 
       return () => clearInterval(timer);
     }
     if (input == "") setCities("");
   }, [input]);
 
-  console.log(cities);
   return (
     <div className={`relative flex justify-center`}>
       <input
