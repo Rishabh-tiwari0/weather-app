@@ -3,6 +3,7 @@ import WeatherCard from "./components/WeatherCard";
 import axios from "axios";
 import { WeatherState } from "./context/GlobalState";
 import ForeCast from "./components/ForeCast";
+import Demo from "./components/Demo";
 
 function App() {
   const {
@@ -39,6 +40,7 @@ function App() {
     >
       <div className={`w-11/12 h-screen`}>
         <Search fetchDetails={fetchDetails} />
+        {!weatherDetails && <Demo />}
         {weatherDetails && <WeatherCard data={weatherDetails} />}
         {forecastData && <ForeCast data={forecastData} />}
       </div>
