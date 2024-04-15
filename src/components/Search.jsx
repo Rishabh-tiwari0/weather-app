@@ -21,7 +21,7 @@ const Search = ({ fetchDetails }) => {
   };
 
   const searchCity = async (input) => {
-    const url = `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=1000000&namePrefix=${input}`;
+    const url = `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=100000&namePrefix=${input}`;
     try {
       const response = await axios.request(url, options);
       setCities(response.data.data);
