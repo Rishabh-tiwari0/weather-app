@@ -5,7 +5,7 @@ import { WeatherState } from "../context/GlobalState";
 
 const Search = ({ fetchDetails }) => {
   const [input, setInput] = useState("");
-  const { cities, setCities, selectedCity } = WeatherState();
+  const { cities, setCities } = WeatherState();
 
   const options = {
     method: "GET",

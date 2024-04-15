@@ -10,6 +10,7 @@ function App() {
     weatherDetails,
     setWeatherDetails,
     setCities,
+    cities,
     forecastData,
     setForecastData,
   } = WeatherState();
@@ -40,7 +41,7 @@ function App() {
     >
       <div className={`w-11/12 h-screen`}>
         <Search fetchDetails={fetchDetails} />
-        {!weatherDetails && <Demo />}
+        {cities.length > 0 || weatherDetails ? "" : <Demo />}
         {weatherDetails && <WeatherCard data={weatherDetails} />}
         {forecastData && <ForeCast data={forecastData} />}
       </div>
